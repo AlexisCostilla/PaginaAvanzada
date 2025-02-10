@@ -1,0 +1,38 @@
+.banner-container {
+    width: auto;
+    height: 100vh;
+    background-image: url('../assets/banner.jpg');
+    background-size: cover;
+    background-position: 75%;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.banner-text {
+    font-size: 11rem;
+    font-weight: bold;
+    color: white;
+    filter: opacity(.7);
+    font-family: "Paytone One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.scale-up-top {
+    animation: scale-up-top 0.4s;
+}
+
+@keyframes scale-up-top {
+    0% {
+        transform: scale(.5);
+        transform-origin: center top
+    }
+
+    100% {
+        transform: scale(1);
+        transform-origin: center top
+    }
+}

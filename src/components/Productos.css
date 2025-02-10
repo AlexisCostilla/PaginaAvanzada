@@ -1,0 +1,16 @@
+.productos{
+    height: 90vh;
+    background-color: #242424;
+}
+
+.productos h2{
+    font-family: "Paytone One", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: aliceblue;
+    font-size: 80px;
+    transform: rotate(-90deg);
+    right: 20vh;
+    top: 40vh;
+    position: relative;
+}
