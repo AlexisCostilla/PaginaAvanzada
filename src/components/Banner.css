@@ -1,9 +1,10 @@
+/* Contenedor principal */
 .banner-container {
-    width: auto;
+    width: 100%;
     height: 100vh;
     background-image: url('../assets/banner.jpg');
     background-size: cover;
-    background-position: 75%;
+    background-position: center;
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
@@ -11,28 +12,45 @@
     text-align: center;
 }
 
-.banner-text {
+/* Header inicial */
+/* Cuando el header está en su estado inicial (centrado en la pantalla) */
+.header {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-size: 11rem;
     font-weight: bold;
     color: white;
-    filter: opacity(.7);
-    font-family: "Paytone One", serif;
-    font-weight: 400;
-    font-style: normal;
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+    opacity: 1;
+    text-align: center;
 }
 
-.scale-up-top {
-    animation: scale-up-top 0.4s;
+/* Cuando el header se hace pequeño y sube */
+.header.scrolled {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);  /* Mantenemos la alineación horizontal */
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 6rem;
+    opacity: 0.9;
 }
 
-@keyframes scale-up-top {
-    0% {
-        transform: scale(.5);
-        transform-origin: center top
-    }
 
-    100% {
-        transform: scale(1);
-        transform-origin: center top
-    }
+/* Efecto extra en el texto */
+.banner-text {
+    font-size: 11rem;
+    transition: font-size 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+/* Cuando el usuario sigue bajando, el texto desaparece */
+.header.scrolled .banner-text {
+    font-size: 6rem;
+    opacity: 0.8;
+    transform: translateY(-5px);
 }

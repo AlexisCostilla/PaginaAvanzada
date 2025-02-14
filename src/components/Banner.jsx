@@ -1,13 +1,29 @@
-import React from 'react';
-import './Banner.css';
-import Img from '../assets/banner.jpg';
+import React, { useEffect, useState } from "react";
+import "./Banner.css";
 
-    function Banner() {
-        return (
-            <main className="banner-container">
-                <h1 className="banner-text scale-up-top">ANIA</h1>
-            </main>
-        );
-    }
+function Banner() {
+    const [isScrolled, setIsScrolled] = useState(false);
 
-    export default Banner;
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 100) {
+                setIsScrolled(true);
+            } else {
+                setIsScrolled(false);
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+    return (
+        <main className="banner-container">
+            <header className={`header ${isScrolled ? "scrolled" : ""}`}>
+                <h1 className="banner-text">ANIA</h1>
+            </header>
+        </main>
+    );
+}
+
+export default Banner;
