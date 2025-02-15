@@ -13,7 +13,6 @@
 }
 
 /* Header inicial */
-/* Cuando el header está en su estado inicial (centrado en la pantalla) */
 .header {
     position: fixed;
     top: 50%;
@@ -28,29 +27,50 @@
     text-align: center;
 }
 
-/* Cuando el header se hace pequeño y sube */
+/* Estilo del header cuando hace scroll */
 .header.scrolled {
     top: 0;
     left: 50%;
-    transform: translateX(-50%);  /* Mantenemos la alineación horizontal */
-    width: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    transform: translateX(-50%);
     padding: 1rem 0;
     text-align: center;
     font-size: 6rem;
     opacity: 0.9;
 }
 
+/* Cambiar el fondo cuando el scroll supera los 150px */
+.header.fondo-cambiado {
+    background-color: rgba(175, 174, 174, 0.8); /* Cambia el color de fondo */
+    width: 100%;
+}
 
-/* Efecto extra en el texto */
+/* Efecto del texto */
 .banner-text {
     font-size: 11rem;
     transition: font-size 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
 }
 
-/* Cuando el usuario sigue bajando, el texto desaparece */
+/* Cambiar el texto cuando el header se hace pequeño */
 .header.scrolled .banner-text {
     font-size: 6rem;
     opacity: 0.8;
     transform: translateY(-5px);
+}
+
+/* Enlaces que aparecen cuando se hace scroll */
+.enlaces {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    font-size: 20px;
+    margin-left: 3rem;
+}
+
+.enlaces.visible {
+    opacity: 1;
+}
+
+.espacios {
+    margin-right: 3rem;
+    color: #ffffff;
+    text-decoration: none;
 }
