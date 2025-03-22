@@ -1,16 +1,44 @@
-.productos{
-    height: 90vh;
-    background-color: #242424;
+.cuotas{
+  padding: 4rem 0 ;
+  line-height: 1.2;
+  color: rgb(255, 255, 255); 
+
+}
+.numero-destacado {
+  font-size: 5rem;
+  font-weight:400;
+ 
 }
 
-.productos h2{
-    font-family: "Paytone One", serif;
-    font-weight: 400;
-    font-style: normal;
-    color: aliceblue;
-    font-size: 80px;
-    transform: rotate(-90deg);
-    right: 20vh;
-    top: 30vh;
-    position: relative;
+.texto-cuotas {
+  font-size: 1.5rem;
+  font-style: italic;
+}
+
+.texto-compras {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-top: -10px; /* Acerca la frase a la de arriba */
+    display: block; /* Asegura que esté en una línea separada */
+}
+
+
+  .carousel-track {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    width: 100%;
+    height: 80%;
+    overflow: visible; /* Permite que las imágenes sobresalgan */
+    background-color: rgb(59, 59, 59);
+  }
+  
+  .carousel-track img {
+width: 95%;
+margin-bottom: 5%;
+object-fit: cover;
+opacity: .8;
+transition: .5s ease;
 }

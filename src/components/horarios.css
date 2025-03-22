@@ -1,0 +1,43 @@
+.conteiner-horarios {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas */
+    grid-template-rows: auto 1fr; /* Dos filas (la primera con tamaño automático y la segunda ocupando el resto) */
+    grid-gap: 10px;
+    background-color: rgb(59, 59, 59);
+    padding: 20px;
+}
+
+/* 📌 Secciones superiores */
+.horarios {
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    grid-column: 1 / 2; /* Primera columna */
+    grid-row: 1 / 2;    /* Primera fila */
+}
+
+.redes {
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    grid-column: 2 / 3; /* Segunda columna */
+    grid-row: 1 / 2;    /* Primera fila */
+}
+
+/* 📌 El mapa ocupa ambas columnas abajo */
+.mapa {
+    grid-column: 1 / 3; /* Ocupará ambas columnas */
+    grid-row: 2 / 3;    /* Segunda fila */
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 📌 Ajustes del iframe del mapa */
+.mapa iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 5px;
+}
