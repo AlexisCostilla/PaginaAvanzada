@@ -1,0 +1,36 @@
+.footer {
+    display: flex;
+    justify-content: space-between; /* Distribuye los elementos a los lados */
+    align-items: center; /* Centra verticalmente */
+    background-color: #333; /* Color de fondo */
+    color: white;
+    padding: 20px;
+}
+
+.footer-left,
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    text-align: center; /* Centra el texto */
+    justify-content: center;
+    align-items: center;
+}
+
+/* 📌 Ajustes de los títulos */
+.footer h2 {
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+/* 📌 Ajustes de los párrafos */
+.footer p {
+    width: 100%;
+    max-width: 300px; /* Un límite más seguro para móviles */
+}
+
+
+.contacto {
+    font-weight: bold;
+}
